@@ -1,0 +1,16 @@
+<!--
+ - Created by viktoriia.nyzhnyk on 13.02.2022.
+ -->
+
+<!-- Boats Near Me -->
+<template>
+    <lightning-card class="slds-is-relative">
+        <!-- The template and lightning-spinner goes here -->
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large"></lightning-spinner>
+        </template>
+        <!-- The lightning-map goes here -->
+        <lightning-map map-markers={mapMarkers}></lightning-map>
+        <div slot="footer">Top 10 Only!</div>
+    </lightning-card>
+</template>
